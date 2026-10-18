@@ -12,8 +12,7 @@
 
 <script>
 const cfg = {
-  base: "",
-  web: "",
+  base: "https://michelle-maria-andrade.github.io/manas_newsletter/",
   imgs: {
     team:      "pictures/team.png",
     nidar:     "pictures/nidar_anchor.png",
@@ -83,11 +82,9 @@ const cfg = {
 </td></tr>
 </table>
 <script>
-document.querySelectorAll("[data-img]").forEach(function (el) {
-  el.src = cfg.base + cfg.imgs[el.dataset.img];
-});
-document.querySelectorAll("[data-link]").forEach(function (el) {
-  el.href = cfg.web + cfg.links[el.dataset.link];
+document.querySelectorAll("[data-img],[data-link]").forEach(function (el) {
+  if (el.dataset.img) el.src = cfg.base + cfg.imgs[el.dataset.img];
+  else el.href = cfg.base + cfg.links[el.dataset.link];
 });
 </script>
 </body>
