@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project MANAS Newsletter | October 2026</title>
+<style>
+  body { margin:0; background:#1b1917; }
+</style>
+</head>
+<body>
+
+<script>
+const cfg = {
+  base: "",
+  web: "",
+  imgs: {
+    team:      "pictures/team.png",
+    nidar:     "pictures/nidar_anchor.png",
+    igvc:      "pictures/igvc_anchor.png",
+    fixedwing: "pictures/fixedwing_anchor.png"
+  },
+  links: { nidar: "#nidar", igvc: "#igvc", fixedwing: "#fixedwing" }
+};
+</script>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1b1917;">
+<tr><td align="center">
+
+<table id="newsletter" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+       style="width:600px; max-width:100%; background:#2e2a27; font-family:Roboto,Arial,Helvetica,sans-serif;">
+
+  <tr>
+    <td style="padding:0; line-height:0; font-size:0;">
+      <img data-img="team" alt="Project MANAS team" width="600"
+           style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+    </td>
+  </tr>
+
+
+  <tr>
+    <td align="center" style="padding:34px 10px 8px 10px;">
+      <div style="font-family: 'Roboto Condensed', 'Arial Narrow', Arial, Helvetica, sans-serif; font-size:26px; color:#ffffff; font-weight:300;">
+        Quick View
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" style="padding:14px 8px 40px 8px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+        
+          <td width="33%" align="center" valign="bottom" style="padding:0 4px;">
+            <a data-link="nidar" href="#" target="_blank" style="text-decoration:none; color:#ffffff;">
+              <img data-img="nidar" alt="NIDAR 2026" width="150" style="display:block; margin:0 auto; width:150px; height:150px; border-radius:50%; border:1px solid #000000;">
+              <div style="font-family:Roboto,Arial,Helvetica,sans-serif; font-size:19px; font-weight:700; color:#ffffff; margin-top:14px;">NIDAR 2026</div>
+              <div style="font-family:Roboto,Arial,Helvetica,sans-serif; font-size:13px; color:#ffffff; margin-top:2px;">Precision Agriculture</div>
+            </a>
+          </td>
+
+          <td width="33%" align="center" valign="bottom" style="padding:0 4px 14px 4px;">
+            <a data-link="igvc" href="#" target="_blank" style="text-decoration:none; color:#ffffff;">
+              <img data-img="igvc" alt="IGVC 2026" width="150" style="display:block; margin:0 auto; width:150px; height:150px; border-radius:50%; border:1px solid #000000;">
+              <div style="font-family:Roboto,Arial,Helvetica,sans-serif; font-size:19px; font-weight:700; color:#ffffff; margin-top:14px;">IGVC 2026</div>
+              <div style="font-family:Roboto,Arial,Helvetica,sans-serif; font-size:13px; color:#ffffff; margin-top:2px;">Autonav &amp; Self-Drive</div>
+            </a>
+          </td>
+          <td width="33%" align="center" valign="bottom" style="padding:0 4px;">
+            <a data-link="fixedwing" href="#" target="_blank" style="text-decoration:none; color:#ffffff;">
+              <img data-img="fixedwing" alt="FIXED-WING" width="150" style="display:block; margin:0 auto; width:150px; height:150px; border-radius:50%; border:1px solid #000000;">
+              <div style="font-family:Roboto,Arial,Helvetica,sans-serif; font-size:19px; font-weight:700; color:#ffffff; margin-top:14px;">Fixed Wing</div>
+              <div style="font-family:Roboto,Arial,Helvetica,sans-serif; font-size:13px; color:#ffffff; margin-top:2px;">CDAC Collaboration</div>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+</table>
+</td></tr>
+</table>
+<script>
+document.querySelectorAll("[data-img]").forEach(function (el) {
+  el.src = cfg.base + cfg.imgs[el.dataset.img];
+});
+document.querySelectorAll("[data-link]").forEach(function (el) {
+  el.href = cfg.web + cfg.links[el.dataset.link];
+});
+</script>
+</body>
+</html>
