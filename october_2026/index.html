@@ -17,8 +17,13 @@ const cfg = {
     team:      "pictures/team.png",
     nidar:     "pictures/nidar_anchor.png",
     igvc:      "pictures/igvc_anchor.png",
-    fixedwing: "pictures/fixedwing_anchor.png"
+    fixedwing: "pictures/fixedwing_anchor.png",
+
+    nidarheader: "pictures/nidar_header.png",
+    nidardrones: "pictures/nidar_drones.png",
+    nidarfinish: "pictures/nidar_finish.png"
   },
+
   links: { nidar: "#nidar", igvc: "#igvc", fixedwing: "#fixedwing" }
 };
 </script>
@@ -73,13 +78,38 @@ const cfg = {
             </a>
           </td>
         </tr>
-      </table>
-    </td>
-  </tr>
 
 
 </table>
 </td></tr>
+
+  <!-- nidar -->
+  <tr>
+    <td style="padding:0; line-height:0; font-size:0;">
+      <a id="nidar" name="nidar"></a>
+      <img data-img="nidarheader" alt="NIDAR" width="600"
+           style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:20px 20px 8px 20px; background:#2e2a27; color:#ffffff; font-family:Tahoma, 'Trebuchet MS', Arial, sans-serif; font-size:15px; line-height:1.5; text-align:justify;">
+      <p style="margin:0 0 18px 0;">The National Innovation Challenge for Drone Application and Research (NIDAR), is currently India's largest drone innovation challenge, organised by the Ministry of Electronics and Information Technology (MeitY) together with the Drone Federation of India (DFI). 2026 marked the very first edition of the competition, drawing 351 teams from across the country attempting to solve two key problem statements: precision agriculture and disaster management.</p>
+      <p style="margin:0 0 18px 0;">For Project MANAS, this marked the first time we attempted a fully coordinated multi-drone autonomous system. We tackled the precision agriculture problem statement which required an autonomous multi-drone system to identify yellow patches on an agricultural field and spray it with a 1 foot accuracy.</p>
+      <p style="margin:0 0 10px 0;">We split the work of scouting and spraying to two different drones which allowed us to optimise both platforms for the individual tasks. They operated as follows:</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0; line-height:0; font-size:0; background:#2e2a27;">
+      <img data-img="nidardrones" alt="Freyja: our heavy-lift spray drone that received geotagged coordinates from Cleo and executed targeted spot-spraying at each identified location. Cleo: our lightweight scout drone that surveyed the field and identified stressed crop regions." width="600"
+           style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0; line-height:0; font-size:0;">
+      <img data-img="nidarfinish" alt="With 100 teams making it to the finals, Project MANAS finished in the top 8 and won the NIDAR Ignite Prize alongside a cash prize of ₹1,00,000." width="600"
+           style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+    </td>
+  </tr>
 </table>
 <script>
 document.querySelectorAll("[data-img],[data-link]").forEach(function (el) {
