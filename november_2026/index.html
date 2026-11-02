@@ -27,7 +27,11 @@ const cfg = {
     igvcwheels: "pictures/igvc_wheels.png",
     igvcgif:    "pictures/igvc_vid.gif",
     igvcnote:   "pictures/igvc_note.png",
-    igvcfinish:"pictures/igvc_finish.png"
+    igvcfinish:"pictures/igvc_finish.png",
+
+    fixedwingheader: "pictures/fixedwing_header.png",
+    fixedwingbody: "pictures/fixedwing_body.png",
+    fixedwingfinish: "pictures/fixedwing_finish.png"
   },
 
   links: { nidar: "#nidar", igvc: "#igvc", fixedwing: "#fixedwing" }
@@ -158,6 +162,35 @@ const cfg = {
            style="display:block; width:100%; max-width:600px; height:auto; border:0;">
     </td>
   </tr>
+
+  <!-- fixed wing -->
+  <tr>
+    <td style="padding:0; line-height:0; font-size:0; background:#2e2a27;">
+      <a id="fixedwing" name="fixedwing"></a>
+      <img data-img="fixedwingheader" alt="Fixed Wing" width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:20px 20px 8px 20px; background:#2e2a27; color:#ffffff; font-family:Tahoma, 'Trebuchet MS', Arial, sans-serif; font-size:15px; line-height:1.5; text-align:justify;">
+      <p style="margin:0 0 18px 0;">Project MANAS's fixed-wing programme, pursued in collaboration with the Centre for Development of Advanced Computing (CDAC), is working toward a self-sustainable, high-endurance fixed-wing aircraft. Unlike our multirotor platforms, a fixed-wing airframe can sustain long-duration flight at low power, making it a natural next step for the team as we look beyond short-endurance rotorcraft missions.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0; line-height:0; font-size:0; background:#2e2a27;">
+      <img data-img="fixedwingbody" alt="All aerodynamic simulations were performed in XFLR5. We compared several airfoils, ultimately selecting the AG35 airfoil for the main wing and the symmetric NACA0012 profile for the horizontal and vertical stabilizers. The fuselage was designed around the avionics and wing/stabilizer mounts, and divided into four sections: a front motor section, a belly section supporting the main wing, a rear transition section, and a tail-mounting section, while keeping the center of gravity near 27% of the main wing chord. Structurally, a carbon-fibre tube runs through the fuselage and tail assembly as the primary structural member, with the main wing built on a dual-spar configuration of carbon-fibre pultruded tubes." width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:20px 20px 8px 20px; background:#2e2a27; color:#ffffff; font-family:Tahoma, 'Trebuchet MS', Arial, sans-serif; font-size:15px; line-height:1.5; text-align:justify;">
+      <p style="margin:0 0 18px 0;">Minimizing weight was the central manufacturing challenge, since the aircraft is intended to fly as a glider. We initially explored EPP foam wings with a 3D-printed fuselage, but the airfoil's thin profile needed a comparatively large carbon-fibre spar to resist deflection, so the design shifted to fully 3D-printed wings instead.</p>
+      <p style="margin:0 0 18px 0;">Conventional sparse-infill 3D-printed structures came out heavier than targeted, which led us through several wing-design iterations and a material switch from LW-PLA (good density, but a poor surface finish) to PLA+, and finally to PETG after bench testing showed the PLA wing deforming under sunlight and heat.</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0; line-height:0; font-size:0; background:#2e2a27;">
+      <img data-img="fixedwingfinish" alt="Several manufacturing changes and design refinements shifted the aircraft's centre of gravity over the course of development, requiring extra weight to be added to the front section to keep the aircraft stable. As a result, the final takeoff weight increased by roughly 0.51 kg over our target weight. Even with that shift, the prototype helped us compare our simulation predictions and real life behaviour. Our immediate focus is on rigorous flight testing to identify performance limitations and areas for improvement and further optimizing our manufacturing techniques while exploring materials with better UV and temperature resistance. Once we've validated the prototype's performance to our satisfaction, we'll move on to designing and developing the final, self-sustainable fixed-wing aircraft." width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0;">
+    </td>
+  </tr>
 </table>
 <script>
 document.querySelectorAll("[data-img],[data-link]").forEach(function (el) {
@@ -165,5 +198,6 @@ document.querySelectorAll("[data-img],[data-link]").forEach(function (el) {
   else el.href = cfg.base + cfg.links[el.dataset.link];
 });
 </script>
+
 </body>
 </html>
